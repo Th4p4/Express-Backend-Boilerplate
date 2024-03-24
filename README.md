@@ -3,13 +3,13 @@ Hi everyone this is a boilerplate for express nodejs mongodb boilerplate with de
 
 # Quick Start
 ```bash
-npx create-nodejs-express-app <project-name>
+npx create-express-backend-boilerplate <project-name>
 ```
 
 Or
 
 ```bash
-npm init nodejs-express-app <project-name>
+npm init express-backend-boilerplate <project-name>
 ```
 
 ## Manual Installation
@@ -19,8 +19,8 @@ If you would still prefer to do the installation manually, follow these steps:
 Clone the repo:
 
 ```bash
-git clone --depth 1 https://github.com/hagopj13/node-express-boilerplate.git
-cd node-express-boilerplate
+git clone --depth 1 https://github.com/Th4p4/Express-Backend-Boilerplate
+cd Express-Backend-Boilerplate
 npx rimraf ./.git
 ```
 
