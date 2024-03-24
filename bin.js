@@ -89,7 +89,7 @@ async function setup() {
     fs.unlinkSync(path.join(appPath, 'CHANGELOG.md'));
     fs.unlinkSync(path.join(appPath, 'CODE_OF_CONDUCT.md'));
     fs.unlinkSync(path.join(appPath, 'CONTRIBUTING.md'));
-    fs.rmdirSync(path.join(appPath, 'bin.js'));
+    fs.unlinkSync(path.join(appPath, 'bin.js'));
     if (!useYarn) {
       fs.unlinkSync(path.join(appPath, 'yarn.lock'));
     }

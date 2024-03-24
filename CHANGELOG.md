@@ -4,6 +4,4 @@
 
 *  init boilerplate with mongodb (9102f05f)
 
-##### Bug Fixes
 
-*  updated readme (4604ab7c)

@@ -1,4 +1,43 @@
+# Express-Backend-Boilerplate
 Hi everyone this is a boilerplate for express nodejs mongodb boilerplate with dependency injection feature
+
+# Quick Start
+```bash
+npx create-nodejs-express-app <project-name>
+```
+
+Or
+
+```bash
+npm init nodejs-express-app <project-name>
+```
+
+## Manual Installation
+
+If you would still prefer to do the installation manually, follow these steps:
+
+Clone the repo:
+
+```bash
+git clone --depth 1 https://github.com/hagopj13/node-express-boilerplate.git
+cd node-express-boilerplate
+npx rimraf ./.git
+```
+
+Install the dependencies:
+
+```bash
+yarn install
+```
+
+Set the environment variables:
+
+```bash
+cp .env.example .env
+
+# open .env and modify the environment variables (if needed)
+```
+
 # Guide to Deploying the Express-Backend-Boilerplate Project with PM2
 
   
