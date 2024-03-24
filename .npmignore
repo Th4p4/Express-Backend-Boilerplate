@@ -1,0 +1,30 @@
+# Dependencies
+node_modules
+logs/
+
+# yarn error logs
+yarn-error.log
+
+# Environment varibales
+.env*
+!.env*.example
+
+# Code coverage
+coverage
+
+# build folder
+dist
+
+# docker volume
+data
+
+# misc
+tsconfig.tsbuildinfo
+
+uploads/
+
+helper
+
+lotto.crt
+lotto.csr
+lotto.key
