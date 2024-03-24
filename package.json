@@ -1,5 +1,5 @@
 {
-  "name": "express-backend-boilerplate",
+  "name": "create-express-backend-boilerplate",
   "version": "0.0.3",
   "description": "Express-Backend-Boilerplate",
   "main": "dist/index.js",
