@@ -1,0 +1,48 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - dev
+
+env:
+  CI: ''
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install Node.js and Yarn
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.15.1' # Adjust to your Node.js version
+
+
+      - name: Install dependencies with Yarn
+        run: yarn
+
+      - name: Create .env file from secret
+        run: |
+          echo "${{ secrets.MY_ENV_FILE }}" > .env
+
+      - name: Run Yarn and Start Dev Server in the Background
+        run: |
+          yarn && yarn compile && yarn dev &
+          sleep 40
+          curl http://localhost:5000 && echo "Server is up!" || (echo "Server didn't start, exiting..." && exit 1)
+      
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 64.226.86.231 >> ~/.ssh/known_hosts
+
+      - name: SSH into Server and Execute Script
+        run: |
+          ssh worker@64.226.86.231 "/data/runner/express-backend-boilerplate.sh"
+          ssh worker@64.226.86.231 "/data/lotto/update_code/backend-push.sh"
