@@ -111,11 +111,13 @@
     "ulid": "^2.3.0",
     "validator": "^13.7.0",
     "winston": "^3.3.3",
-    "xss-clean": "^0.1.1"
+    "xss-clean": "^0.1.1",
+    "yargs": "^17.7.2"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/@ryansonshine/cz-conventional-changelog"
     }
-  }
+  },
+  "bin": "./bin.js"
 }
