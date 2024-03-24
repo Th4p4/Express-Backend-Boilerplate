@@ -1,6 +1,7 @@
 {
   "name": "create-express-backend-boilerplate",
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "author": "Sandip Thapa",
   "description": "Express-Backend-Boilerplate",
   "main": "dist/index.js",
   "type": "module",
@@ -119,5 +120,10 @@
       "path": "./node_modules/@ryansonshine/cz-conventional-changelog"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Th4p4/Express-Backend-Boilerplate"
+  },
+  "license": "MIT",
   "bin": "./bin.js"
 }
